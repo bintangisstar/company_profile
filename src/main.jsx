@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useState, StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
 import {
   ArrowUpRight, BarChart3, Check, ChevronDown, CirclePlay, Compass, Cpu,
   Globe2, Menu, MoveUpRight, Palette,
@@ -100,3 +101,9 @@ function App() {
 }
 
 export default App
+
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <App />
+  </StrictMode>
+)
